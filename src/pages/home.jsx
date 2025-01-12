@@ -1,8 +1,10 @@
 import React from "react";
-import Carousel from "../components/Carousel";
 import OneCikanlar from "../components/OneCikanlar";
 import AboutUs from "../components/AboutUs";
 import Header from "../components/Header";
+import UrunlerCarousel from "../components/UrunlerCarousel";
+import MakinelerCarousel from "../components/MakinelerCarousel";
+import ContactUs from "../components/ContactUs";
 
 const Home = () => {
   return (
@@ -12,27 +14,38 @@ const Home = () => {
 
       {/* Hero Section */}
       <section
-        id="home"
+        id="anasayfa"
         className="bg-red-500 text-white py-20 text-center flex flex-col items-center"
       >
-        <h2 className="text-4xl font-bold mb-4">
+        <h2 className="text-4xl font-bold mb-4 mt-4">
           Yüksek Kalite, Yenilikçi Çözümler
         </h2>
         <p className="max-w-md">
           Plastik endüstrisinde yılların tecrübesiyle kaliteli ve çevre dostu
           çözümler sunuyoruz.
         </p>
-        <button className="mt-6 bg-white text-red-500 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition">
-          Daha Fazla Bilgi
-        </button>
       </section>
 
       {/* Öne Çıkanlar */}
       <OneCikanlar />
-      {/* Carousel */}
-      <Carousel />
+      {/* Urunler Carousel */}
+      <section id="ürünler">
+        <UrunlerCarousel />
+      </section>
+
+      {/*Makinelerimiz*/}
+
+      <MakinelerCarousel />
+
       {/* Hakkımızda */}
-      <AboutUs />
+      <section id="hakkımızda">
+        <AboutUs />
+      </section>
+
+      {/*Bizimle iletişime geçin */}
+      <section id="iletişim">
+        <ContactUs />
+      </section>
 
       {/* Footer */}
       <footer className="bg-red-500 text-white py-6">

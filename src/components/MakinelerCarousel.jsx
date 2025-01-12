@@ -3,7 +3,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const Carousel = () => {
+const MakinelerCarousel = () => {
   const products = [
     {
       id: 1,
@@ -28,13 +28,13 @@ const Carousel = () => {
   ];
 
   return (
-    <div id="products" className="w-full bg-gray-100 py-10">
-      <h2 className="text-center text-2xl font-bold  mb-6">Ürünlerimiz</h2>
+    <div id="products" className="w-full bg-gray-100 py-10 px-10">
+      <h2 className="text-center text-2xl font-bold mb-6">Makinelerimiz</h2>
       <Swiper
         modules={[Pagination]}
         spaceBetween={30}
-        slidesPerView={3}
-        pagination={{ clickable: true }}
+        slidesPerView={1}
+        pagination={{ clickable: true, el: ".makineler-pagination" }} // Özel pagination
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
@@ -47,7 +47,7 @@ const Carousel = () => {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-48 object-cover rounded-t-lg"
+                className="w-full h-full object-cover rounded-t-lg"
               />
               <h3 className="text-center text-lg font-semibold mt-4">
                 {product.name}
@@ -56,8 +56,9 @@ const Carousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="makineler-pagination mt-6 flex justify-center gap-4"></div>
     </div>
   );
 };
 
-export default Carousel;
+export default MakinelerCarousel;

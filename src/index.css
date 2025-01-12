@@ -4,3 +4,45 @@
 
 
 /* @import 'swiper/swiper-bundle.css'; */
+
+/*Pagination of Carousel*/
+.custom-pagination {
+    margin-top: 20px; /* Noktaları aşağıya taşır */
+    display: flex;
+    justify-content: center; /* Yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    gap: 10px; /* Noktalar arasındaki boşluk */
+  }
+  
+  .custom-pagination .swiper-pagination-bullet {
+    background: #ccc; /* Nokta rengi */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /* Noktaları yuvarlak yap */
+  }
+  
+  .custom-pagination .swiper-pagination-bullet-active {
+    background: #007bff; /* Aktif nokta rengi */
+  }
+  
+  /*Touch Animation*/
+  /* Dokunma halkası */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Dokunulan alanda görünmesini sağlayan stil */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.4); /* Açık kırmızı renk */
+  pointer-events: none;
+  animation: ripple 0.6s ease-out forwards;
+}
