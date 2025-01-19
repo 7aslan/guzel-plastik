@@ -1,6 +1,6 @@
 const AboutUs = () => {
     return (
-      <div id="about" className="py-10 bg-white text-center">
+      <div className="py-10 bg-white text-center">
         <h2 className="text-2xl font-bold text-red-600 mb-4">Hakkımızda</h2>
         <p className="text-gray-700 max-w-3xl mx-auto mx-2">
           Güzel Plastik, sektörde 20 yılı aşkın tecrübesiyle yüksek kaliteli plastik ürünler

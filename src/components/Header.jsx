@@ -32,7 +32,7 @@ const Header = () => {
           }`}
         >
           <ul className="flex flex-col items-center md:flex-row">
-            {["Anasayfa", "Ürünler", "Hakkımızda", "İletişim"].map(
+            {["Anasayfa", "Ürünler", "Makineler", "Hakkımızda", "Iletişim"].map(
               (item, index) => (
                 <li key={index} className="mb-4 md:mb-0">
                   <Link
@@ -44,6 +44,7 @@ const Header = () => {
                   >
                     {item}
                   </Link>
+                  
                 </li>
               )
             )}

@@ -1,4 +1,3 @@
-import React from "react";
 import OneCikanlar from "../components/OneCikanlar";
 import AboutUs from "../components/AboutUs";
 import Header from "../components/Header";
@@ -11,7 +10,6 @@ const Home = () => {
     <div id="home" className="bg-white text-gray-800">
       {/* Header */}
       <Header />
-
       {/* Hero Section */}
       <section
         id="anasayfa"
@@ -34,8 +32,9 @@ const Home = () => {
       </section>
 
       {/*Makinelerimiz*/}
-
-      <MakinelerCarousel />
+      <section id="makineler">
+        <MakinelerCarousel />
+      </section>
 
       {/* Hakkımızda */}
       <section id="hakkımızda">
@@ -43,7 +42,7 @@ const Home = () => {
       </section>
 
       {/*Bizimle iletişime geçin */}
-      <section id="iletişim">
+      <section id="iletişim" >
         <ContactUs />
       </section>
 

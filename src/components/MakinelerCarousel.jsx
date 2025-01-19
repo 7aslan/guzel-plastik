@@ -8,22 +8,22 @@ const MakinelerCarousel = () => {
     {
       id: 1,
       name: "Ürün 1",
-      image: "https://via.placeholder.com/300x200?text=Ürün+1",
+      image: "https://picsum.photos/100",
     },
     {
       id: 2,
       name: "Ürün 2",
-      image: "https://via.placeholder.com/300x200?text=Ürün+2",
+      image: "https://picsum.photos/100",
     },
     {
       id: 3,
       name: "Ürün 3",
-      image: "https://via.placeholder.com/300x200?text=Ürün+3",
+      image: "https://picsum.photos/100",
     },
     {
       id: 4,
       name: "Ürün 4",
-      image: "https://via.placeholder.com/300x200?text=Ürün+4",
+      image: "https://picsum.photos/100",
     },
   ];
 
