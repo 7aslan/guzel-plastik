@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import UrunlerCarousel from "../components/UrunlerCarousel";
 import MakinelerCarousel from "../components/MakinelerCarousel";
 import ContactUs from "../components/ContactUs";
+import MainPage from "../components/mainPage";
 
 const Home = () => {
   return (
@@ -15,13 +16,7 @@ const Home = () => {
         id="anasayfa"
         className="bg-blue-500 text-white py-20 pb-5 text-center flex flex-col items-center"
       >
-        <h2 className="text-4xl font-bold mb-5 mt-8">
-          Yüksek Kalite, Yenilikçi Çözümler
-        </h2>
-        <p className="max-w-md">
-          Plastik endüstrisinde yılların tecrübesiyle kaliteli ve çevre dostu
-          çözümler sunuyoruz.
-        </p>
+        <MainPage />
       </section>
 
       {/* Öne Çıkanlar */}
@@ -42,7 +37,7 @@ const Home = () => {
       </section>
 
       {/*Bizimle iletişime geçin */}
-      <section id="iletişim" >
+      <section id="iletişim">
         <ContactUs />
       </section>
 
