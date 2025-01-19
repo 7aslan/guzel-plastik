@@ -31,7 +31,7 @@ const Header = () => {
 
         {/* Navigation Links */}
         <nav
-          className={`absolute top-16 left-0 w-full bg-blue-400 md:static md:w-auto md:flex md:items-center md:space-x-6 ${
+          className={`absolute top-20 left-0 w-full bg-blue-400 md:static md:w-auto md:flex md:items-center md:space-x-6 ${
             isMenuOpen ? "block" : "hidden"
           }`}
         >
