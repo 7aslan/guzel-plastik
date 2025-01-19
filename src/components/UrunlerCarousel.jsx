@@ -28,7 +28,7 @@ const UrunlerCarousel = () => {
   ];
 
   return (
-    <div id="products" className="w-full bg-gray-100 py-10 px-10 ">
+    <div id="products" className="w-full bg-gray-200 py-10 px-10 ">
       <h2 className="text-center text-2xl font-bold mb-6">Ürünlerimiz</h2>
       <Swiper
         modules={[Pagination]}

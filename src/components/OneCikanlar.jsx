@@ -1,8 +1,8 @@
 const OneCikanlar = () => {
   return (
-    <section id="highlights" className="container mx-auto py-16 text-center">
-      <h3 className="text-3xl font-bold mb-10 ">Öne Çıkanlar</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section id="highlights" className=" container mx-auto  py-16 text-center">
+      <h3 className="text-3xl font-bold mb-10  ">Öne Çıkanlar</h3>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
         <div className="p-6 shadow-lg rounded-lg">
           <img
             src="https://via.placeholder.com/150"

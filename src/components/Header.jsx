@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
+import logo from "../assets/logo.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,9 +14,12 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-red-600 text-white py-4 fixed w-full top-0 z-50">
+    <header className="bg-blue-400 text-white py-4 fixed w-full top-0 z-50">
       <div className="container mx-auto flex justify-between items-center ">
-        <h1 className="text-2xl font-bold ml-2">Güzel Plastik</h1>
+        <div className="flex justify-center items-center">
+          <img src={logo} alt="logo" width={55} className="ml-5 rounded-xl" />
+          <h1 className="text-3xl font-bold ml-2">Güzel Plastik</h1>
+        </div>
 
         {/* Hamburger Menu Button */}
         <button
@@ -27,7 +31,7 @@ const Header = () => {
 
         {/* Navigation Links */}
         <nav
-          className={`absolute top-16 left-0 w-full bg-red-600 md:static md:w-auto md:flex md:items-center md:space-x-6 ${
+          className={`absolute top-16 left-0 w-full bg-blue-400 md:static md:w-auto md:flex md:items-center md:space-x-6 ${
             isMenuOpen ? "block" : "hidden"
           }`}
         >
@@ -44,7 +48,6 @@ const Header = () => {
                   >
                     {item}
                   </Link>
-                  
                 </li>
               )
             )}

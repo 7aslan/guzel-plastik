@@ -13,9 +13,9 @@ const Home = () => {
       {/* Hero Section */}
       <section
         id="anasayfa"
-        className="bg-red-500 text-white py-20 text-center flex flex-col items-center"
+        className="bg-blue-500 text-white py-20 pb-5 text-center flex flex-col items-center"
       >
-        <h2 className="text-4xl font-bold mb-4 mt-4">
+        <h2 className="text-4xl font-bold mb-5 mt-8">
           Yüksek Kalite, Yenilikçi Çözümler
         </h2>
         <p className="max-w-md">
@@ -47,7 +47,7 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-red-500 text-white py-6">
+      <footer className="bg-blue-400 text-white py-6">
         <div className="container mx-auto text-center">
           <p>© 2024 Plastik Şirketi. Tüm hakları saklıdır.</p>
         </div>
