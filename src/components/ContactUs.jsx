@@ -9,7 +9,7 @@ const ContactUs = () => {
         </p>
         <div className="space-y-2">
           <p>📍 Adres: Küsget Sanayi Şehitkamil/Gaziantep</p>
-          <p>📞 Telefon: +90 212 555 44 33</p>
+          <p>📞 Telefon: +90 535 244 0874</p>
           <p>✉️ E-posta: info@guzelplastik.com</p>
         </div>
 

@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import cihaz1 from "../assets/cihazlar/cihaz1.jpg";
 import cihaz3 from "../assets/cihazlar/cihaz3.jpg";
 import cihaz4 from "../assets/cihazlar/cihaz4.jpg";
+import cihaz5 from "../assets/cihazlar/cihaz5.jpg";
 
 const MakinelerCarousel = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -28,6 +29,12 @@ const MakinelerCarousel = () => {
       name: "CNC Makinesi",
       image: cihaz4,
       description: "Karmaşık iş parçalarının üretimi için güçlü CNC makineleri."
+    },
+    {
+      id: 4,
+      name: "Plastik Enjeksiyon Makinesi",
+      image: cihaz5,
+      description: "Yüksek kaliteli plastik ürünler üretiminde kullanılan enjeksiyon makinesi."
     },
   ];
 
