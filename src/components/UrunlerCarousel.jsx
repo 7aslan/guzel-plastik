@@ -8,6 +8,7 @@ import urun5 from "../assets/urunler/urun5.jpg"
 import urun6 from "../assets/urunler/urun6.jpg"
 import urun7 from "../assets/urunler/urun7.jpg"
 import urun9 from "../assets/urunler/urun9.jpg"
+import kelepceson from "../assets/urunler/kelepceson.jpg"
 
 
 const UrunlerCarousel = () => {
@@ -17,30 +18,36 @@ const UrunlerCarousel = () => {
     {
       id: 1,
       name: "Ürün 1",
-      image: urun1,
+      image: kelepceson,
       description: "Ürün 1 açıklaması"
     },
     {
       id: 2,
       name: "Ürün 2",
-      image: urun5,
-      description: "Ürün 2 açıklaması"
+      image: urun1,
+      description: "Ürün 1 açıklaması"
     },
     {
       id: 3,
       name: "Ürün 3",
-      image: urun6,
-      description: "Ürün 3 açıklaması"
+      image: urun5,
+      description: "Ürün 2 açıklaması"
     },
     {
       id: 4,
       name: "Ürün 4",
+      image: urun6,
+      description: "Ürün 3 açıklaması"
+    },
+    {
+      id: 5,
+      name: "Ürün 5",
       image: urun7,
       description: "Ürün 4 açıklaması"
     },
     {
-      id: 4,
-      name: "Ürün 5",
+      id: 6,
+      name: "Ürün 6",
       image: urun9,
       description: "Ürün 5 açıklaması"
     },
