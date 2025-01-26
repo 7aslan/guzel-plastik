@@ -87,7 +87,7 @@ const ProductsPage = () => {
       {/* Modal */}
       {selectedProduct && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-lg relative max-w-lg w-full">
+          <div className="bg-white p-6 rounded-lg relative max-w-2xl w-full">
             <button
               className="absolute top-2 right-2 text-gray-800 text-2xl font-bold"
               onClick={() => setSelectedProduct(null)}
