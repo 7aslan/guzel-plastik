@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { Cloudinary } from "@cloudinary/url-gen";
@@ -8,8 +9,11 @@ import urunler from "../data/urunler"; // Ürün verilerini içe aktarıyoruz
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom";
 
 const UrunlerCarousel = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const cld = new Cloudinary({
     cloud: { cloudName: "dkup33xp3" }, // Cloudinary cloudName'inizi ekleyin
   });
@@ -33,14 +37,19 @@ const UrunlerCarousel = () => {
             .image(product.image)
             .format("auto")
             .quality("auto")
-            .resize(auto().gravity(autoGravity()).width(500).height(500));
+            .resize(auto().gravity(autoGravity()).width(400).height(400));
 
           return (
             <SwiperSlide key={product.id}>
-              <div className="p-4 bg-white shadow-lg rounded-lg cursor-pointer hover:scale-105 transition-transform">
+              <div
+                className="p-4 bg-white shadow-lg rounded-lg cursor-pointer hover:scale-105 transition-transform"
+                onClick={() => setSelectedImage(product)}
+              >
                 <AdvancedImage
                   cldImg={img}
-                  className="w-full h-64 object-cover rounded-t-lg"
+                  alt={product.name}
+                  loading="lazy"
+                  className="w-full h-full object-cover rounded-t-lg"
                 />
                 <h3 className="text-center text-lg font-semibold mt-4">
                   {product.name}
@@ -51,6 +60,37 @@ const UrunlerCarousel = () => {
         })}
       </Swiper>
       <div className="urunler-pagination mt-6 flex gap-3 justify-center"></div>
+      <Link
+        to="/urunler"
+        className="bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 mt-4 absolute right-10 text-center "
+      >
+        Tüm Ürünleri Gör
+      </Link>
+
+      {/* Pop-up Modal */}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg relative max-w-lg">
+            <button
+              className="absolute top-2 right-2 text-gray-800 text-2xl font-bold"
+              onClick={() => setSelectedImage(null)}
+            >
+              ×
+            </button>
+            <h2 className="text-xl font-semibold text-center mb-4">
+              {selectedImage.name}
+            </h2>
+            <AdvancedImage
+              cldImg={cld.image(selectedImage.image).resize(auto().width(700))}
+              alt={selectedImage.name}
+              className="max-w-full max-h-[60vh] object-contain rounded-lg"
+            />
+            <p className="mt-4 text-center text-gray-700">
+              {selectedImage.description}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

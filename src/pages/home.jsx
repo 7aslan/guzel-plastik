@@ -6,6 +6,7 @@ import MakinelerCarousel from "../components/MakinelerCarousel";
 import ContactUs from "../components/ContactUs";
 import MainPage from "../components/mainPage";
 
+
 const Home = () => {
   return (
     <div id="home" className="bg-white text-gray-800">

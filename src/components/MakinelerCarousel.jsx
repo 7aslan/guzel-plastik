@@ -36,7 +36,7 @@ const MakinelerCarousel = () => {
             .image(product.image)
             .format("auto")
             .quality("auto")
-            .resize(auto().gravity(autoGravity()).width(500).height(500));
+            .resize(auto().gravity(autoGravity()).width(400).height(400));
 
           return (
             <SwiperSlide key={product.id}>
