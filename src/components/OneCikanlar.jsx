@@ -5,13 +5,13 @@ import oneCikanlar from "../data/oneCikanlar"; // Öne çıkanlar verisini içe 
 
 const OneCikanlar = () => {
   const cld = new Cloudinary({
-    cloud: { cloudName: "dkup33xp3" }, // Cloudinary cloudName'inizi ekleyin
+    cloud: { cloudName: "dkup33xp3" }, 
   });
 
   return (
     <section id="highlights" className="bg-gray-200 py-16 text-center mx-auto">
       <h3 className="text-3xl font-bold mb-10">Öne Çıkanlar</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-8 lg:px-64 ">
         {oneCikanlar.map((item) => {
           const img = cld
             .image(item.image)
