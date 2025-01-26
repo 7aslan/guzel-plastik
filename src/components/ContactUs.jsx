@@ -3,12 +3,12 @@ const ContactUs = () => {
     <section id="contact" className="bg-blue-500 text-white py-8">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">İletişim</h2>
-        <p className="mb-4">
+        <p className="mb-4 text-xl">
           Plastik sektöründeki sorularınız veya iş birliği teklifiniz için bize
           ulaşabilirsiniz.
         </p>
-        <div className="space-y-2">
-          <p>📍 Adres: Küsget Sanayi Şehitkamil/Gaziantep</p>
+        <div className="space-y-2 text-lg">
+          <p>📍 Adres: Sanayi, 60014. Cd. No:114, 27110 Şehitkamil/Gaziantep</p>
           <p>📞 Telefon: +90 535 244 0874</p>
           <p>✉️ E-posta: info@guzelplastik.com</p>
         </div>

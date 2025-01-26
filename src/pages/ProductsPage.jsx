@@ -34,7 +34,7 @@ const ProductsPage = () => {
 
       {/* Ürünler Bölümü */}
       <div className="w-full bg-gray-100 py-16 px-10 mt-10">
-        <h2 className="text-center text-2xl font-bold mb-8">Tüm Ürünler</h2>
+        <h2 className="text-center text-4xl font-bold mb-8">Tüm Ürünler</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {urunler.map((product) => {
             const img = cld
@@ -102,7 +102,7 @@ const ProductsPage = () => {
                 .image(selectedProduct.image)
                 .resize(auto().width(700))}
               alt={selectedProduct.name}
-              className="max-w-full max-h-[60vh] object-contain rounded-lg"
+              className="max-w-full max-h-[60vh] object-contain mx-auto block rounded-lg"
             />
             <p className="mt-4 text-center text-gray-700">
               {selectedProduct.description || "Detaylı bilgi mevcut değil."}

@@ -7,7 +7,7 @@ const AboutUs = () => {
       </h2>
       
       {/* Açıklama Metni */}
-      <p className="text-gray-700 max-w-3xl mx-auto px-4 text-sm sm:text-base md:text-lg lg:text-xl">
+      <p className="text-gray-700 max-w-3xl mx-auto px-4 text-lg sm:text-base md:text-lg lg:text-xl">
         Güzel Plastik, sektörde 20 yılı aşkın tecrübesiyle yüksek kaliteli plastik ürünler 
         ve çelik kalıplar üretmektedir. Çevre dostu üretim süreçleriyle, müşteri memnuniyetini ön planda
         tutuyoruz.

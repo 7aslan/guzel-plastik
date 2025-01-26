@@ -20,24 +20,25 @@ const UrunlerCarousel = () => {
 
   return (
     <div id="products" className="w-full bg-gray-200 py-10 px-10">
-      <h2 className="text-center text-2xl font-bold mb-6">Ürünlerimiz</h2>
+      <h2 className="text-center text-3xl font-bold mb-6">Ürünlerimiz</h2>
       <Swiper
         modules={[Pagination]}
         spaceBetween={30}
-        slidesPerView={1}
+        slidesPerView={1.2}
         pagination={{ clickable: true, el: ".urunler-pagination" }}
         breakpoints={{
-          640: { slidesPerView: 1 },
+          640: { slidesPerView: 1.2 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
+        className="max-w-screen-xl mx-auto"
       >
         {urunler.map((product) => {
           const img = cld
             .image(product.image)
             .format("auto")
             .quality("auto")
-            .resize(auto().gravity(autoGravity()).width(400).height(400));
+            .resize(auto().gravity(autoGravity()).width(300).height(300));
 
           return (
             <SwiperSlide key={product.id}>
@@ -60,17 +61,19 @@ const UrunlerCarousel = () => {
         })}
       </Swiper>
       <div className="urunler-pagination mt-6 flex gap-3 justify-center"></div>
-      <Link
-        to="/urunler"
-        className="bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 mt-4 absolute right-10 text-center "
-      >
-        Tüm Ürünleri Gör
-      </Link>
+      <div className="flex justify-center mt-4">
+        <Link
+          to="/urunler"
+          className="bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 mt-4 inline-block text-center "
+        >
+          Tüm Ürünleri Gör
+        </Link>
+      </div>
 
       {/* Pop-up Modal */}
       {selectedImage && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-lg relative max-w-lg">
+          <div className="bg-white p-6 rounded-lg relative max-w-3xl">
             <button
               className="absolute top-2 right-2 text-gray-800 text-2xl font-bold"
               onClick={() => setSelectedImage(null)}

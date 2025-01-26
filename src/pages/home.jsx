@@ -45,7 +45,7 @@ const Home = () => {
       {/* Footer */}
       <footer className="bg-blue-400 text-white py-6">
         <div className="container mx-auto text-center">
-          <p>© 2024 Plastik Şirketi. Tüm hakları saklıdır.</p>
+          <p>© 2025 Güzel Plastik Sanayi . Tüm hakları saklıdır.</p>
         </div>
       </footer>
     </div>

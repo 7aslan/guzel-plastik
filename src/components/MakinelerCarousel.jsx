@@ -20,7 +20,7 @@ const MakinelerCarousel = () => {
 
   return (
     <div id="products" className="w-full bg-gray-200 py-10 px-10">
-      <h2 className="text-center text-2xl font-bold mb-6">Makinelerimiz</h2>
+      <h2 className="text-center text-3xl font-bold mb-6">Makinelerimiz</h2>
       <Swiper
         modules={[Pagination]}
         spaceBetween={30}
@@ -31,6 +31,7 @@ const MakinelerCarousel = () => {
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
+        className="max-w-screen-xl mx-auto"
       >
         {makineler.map((product) => {
           const img = cld
@@ -64,7 +65,7 @@ const MakinelerCarousel = () => {
       {/* Pop-up Modal */}
       {selectedImage && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-lg relative max-w-lg">
+          <div className="bg-white p-6 rounded-lg relative max-w-3xl">
             <button
               className="absolute top-2 right-2 text-gray-800 text-2xl font-bold"
               onClick={() => setSelectedImage(null)}
@@ -88,7 +89,7 @@ const MakinelerCarousel = () => {
       <div className="text-center mt-6 ">
         <Link
           to="/makineler"
-          className="bg-blue-500 text-white py-4 px-3 rounded-lg hover:bg-blue-600 mt-4 absolute right-10 text-center "
+          className="bg-blue-500 text-white  py-4 px-3 rounded-lg hover:bg-blue-600 mt-4 inline-block  text-center "
         >
           Tüm Makineleri Gör
         </Link>
