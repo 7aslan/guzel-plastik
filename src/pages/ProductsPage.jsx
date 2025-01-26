@@ -14,6 +14,19 @@ const ProductsPage = () => {
     cloud: { cloudName: "dkup33xp3" }, // Cloudinary ayarı
   });
 
+  const handleTeklifAl = () => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(
+      window.navigator.userAgent
+    );
+    if (isMobile) {
+      // Mobil cihazlarda telefon uygulamasını aç
+      window.location.href = "tel:+905352440874";
+    } else {
+      // Masaüstü cihazlarda iletişim kısmına yönlendir
+      window.location.href = "/#iletişim";
+    }
+  };
+
   return (
     <div>
       {/* Header */}
@@ -57,12 +70,12 @@ const ProductsPage = () => {
                     </button>
                   </div>
                   <div className="mt-2 flex justify-center">
-                    <Link
-                      to={`/teklif-al/${product.id}`}
+                    <button
+                      onClick={handleTeklifAl}
                       className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"
                     >
                       Teklif Al
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -95,12 +108,12 @@ const ProductsPage = () => {
               {selectedProduct.description || "Detaylı bilgi mevcut değil."}
             </p>
             <div className="mt-4 text-center">
-              <Link
-                to={`/teklif-al/${selectedProduct.id}`}
+              <button
+                onClick={handleTeklifAl}
                 className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
               >
                 Teklif Al
-              </Link>
+              </button>
             </div>
           </div>
         </div>

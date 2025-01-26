@@ -16,10 +16,8 @@ const Header = () => {
 
   const navigateToSection = (sectionId) => {
     if (location.pathname !== "/") {
-      // Eğer farklı bir sayfadaysak anasayfaya yönlendir
       window.location.href = `/#${sectionId}`;
     } else {
-      // Eğer zaten anasayfadaysak, ilgili bölüme kaydır
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
@@ -28,15 +26,17 @@ const Header = () => {
     closeMenu();
   };
 
-  const navigateToTop = () => {
-    if (location.pathname !== "/") {
-      // Eğer farklı bir sayfadaysak, anasayfaya yönlendir
-      window.location.href = "/";
+  const handleTeklifAlClick = () => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(
+      window.navigator.userAgent
+    );
+    if (isMobile) {
+      // Mobil cihazlarda telefon uygulamasını aç
+      window.location.href = "tel:+905352440874";
     } else {
-      // Eğer zaten anasayfadaysak, en üste kaydır
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      // Masaüstü cihazlarda iletişim kısmına yönlendir
+      navigateToSection("iletişim");
     }
-    closeMenu();
   };
 
   return (
@@ -63,12 +63,13 @@ const Header = () => {
         >
           <ul className="flex flex-col items-center md:flex-row">
             <li className="mb-4 md:mb-0">
-              <button
-                onClick={navigateToTop}
+              <Link
+                to="/"
+                onClick={closeMenu}
                 className="text-xl cursor-pointer hover:underline mr-3"
               >
                 Anasayfa
-              </button>
+              </Link>
             </li>
             <li className="mb-4 md:mb-0">
               <Link
@@ -101,6 +102,14 @@ const Header = () => {
                 className="text-xl cursor-pointer hover:underline mr-3"
               >
                 İletişim
+              </button>
+            </li>
+            <li className="mb-4 md:mb-0">
+              <button
+                onClick={handleTeklifAlClick}
+                className="text-xl bg-green-500 px-4 py-2 rounded-lg hover:bg-green-600 transition"
+              >
+                Teklif Al
               </button>
             </li>
           </ul>
