@@ -1,42 +1,21 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+import { auto } from "@cloudinary/url-gen/actions/resize";
+import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
+import makineler from "../data/makineler"; // Makineler verisini içe aktarıyoruz
+
 import "swiper/css";
 import "swiper/css/pagination";
-import cihaz1 from "../assets/cihazlar/cihaz1.jpg";
-import cihaz3 from "../assets/cihazlar/cihaz3.jpg";
-import cihaz4 from "../assets/cihazlar/cihaz4.jpg";
-import cihaz5 from "../assets/cihazlar/cihaz5.jpg";
 
 const MakinelerCarousel = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const products = [
-    {
-      id: 1,
-      name: "Plastik Enjeksiyon Makinesi",
-      image: cihaz1,
-      description: "Yüksek kaliteli plastik ürünler üretiminde kullanılan enjeksiyon makinesi."
-    },
-    {
-      id: 2,
-      name: "CNC Makinesi",
-      image: cihaz3,
-      description: "Özel tasarımlar ve yüksek hassasiyetli işleme için kullanılan CNC makinesi."
-    },
-    {
-      id: 3,
-      name: "CNC Makinesi",
-      image: cihaz4,
-      description: "Karmaşık iş parçalarının üretimi için güçlü CNC makineleri."
-    },
-    {
-      id: 4,
-      name: "Plastik Enjeksiyon Makinesi",
-      image: cihaz5,
-      description: "Yüksek kaliteli plastik ürünler üretiminde kullanılan enjeksiyon makinesi."
-    },
-  ];
+  const cld = new Cloudinary({
+    cloud: { cloudName: "dkup33xp3" }, // Cloudinary cloudName'inizi ekleyin
+  });
 
   return (
     <div id="products" className="w-full bg-gray-200 py-10 px-10">
@@ -52,24 +31,32 @@ const MakinelerCarousel = () => {
           1024: { slidesPerView: 3 },
         }}
       >
-        {products.map((product) => (
-          <SwiperSlide key={product.id}>
-            <div
-              className="p-4 bg-white shadow-lg rounded-lg cursor-pointer hover:scale-105 transition-transform"
-              onClick={() => setSelectedImage(product)}
-            >
-              <img
-                src={product.image}
-                alt={product.name}
-                loading="lazy"
-                className="w-full h-full object-cover rounded-t-lg"
-              />
-              <h3 className="text-center text-lg font-semibold mt-4">
-                {product.name}
-              </h3>
-            </div>
-          </SwiperSlide>
-        ))}
+        {makineler.map((product) => {
+          const img = cld
+            .image(product.image)
+            .format("auto")
+            .quality("auto")
+            .resize(auto().gravity(autoGravity()).width(500).height(500));
+
+          return (
+            <SwiperSlide key={product.id}>
+              <div
+                className="p-4 bg-white shadow-lg rounded-lg cursor-pointer hover:scale-105 transition-transform"
+                onClick={() => setSelectedImage(product)}
+              >
+                <AdvancedImage
+                  cldImg={img}
+                  alt={product.name}
+                  loading="lazy"
+                  className="w-full h-full object-cover rounded-t-lg"
+                />
+                <h3 className="text-center text-lg font-semibold mt-4">
+                  {product.name}
+                </h3>
+              </div>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
       <div className="makineler-pagination mt-6 flex justify-center gap-4"></div>
 
@@ -84,8 +71,8 @@ const MakinelerCarousel = () => {
               ×
             </button>
             <h2 className="text-xl font-semibold text-center mb-4">{selectedImage.name}</h2>
-            <img
-              src={selectedImage.image}
+            <AdvancedImage
+              cldImg={cld.image(selectedImage.image).resize(auto().width(700))}
               alt={selectedImage.name}
               className="max-w-full max-h-[60vh] object-contain rounded-lg"
             />
