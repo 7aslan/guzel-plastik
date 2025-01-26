@@ -9,6 +9,7 @@ import makineler from "../data/makineler"; // Makineler verisini içe aktarıyor
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom";
 
 const MakinelerCarousel = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -70,16 +71,28 @@ const MakinelerCarousel = () => {
             >
               ×
             </button>
-            <h2 className="text-xl font-semibold text-center mb-4">{selectedImage.name}</h2>
+            <h2 className="text-xl font-semibold text-center mb-4">
+              {selectedImage.name}
+            </h2>
             <AdvancedImage
               cldImg={cld.image(selectedImage.image).resize(auto().width(700))}
               alt={selectedImage.name}
               className="max-w-full max-h-[60vh] object-contain rounded-lg"
             />
-            <p className="mt-4 text-center text-gray-700">{selectedImage.description}</p>
+            <p className="mt-4 text-center text-gray-700">
+              {selectedImage.description}
+            </p>
           </div>
         </div>
       )}
+      <div className="text-center mt-6 ">
+        <Link
+          to="/makineler"
+          className="bg-blue-500 text-white py-4 px-3 rounded-lg hover:bg-blue-600 mt-4 absolute right-10 text-center "
+        >
+          Tüm Makineleri Gör
+        </Link>
+      </div>
     </div>
   );
 };

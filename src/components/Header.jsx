@@ -81,12 +81,13 @@ const Header = () => {
               </Link>
             </li>
             <li className="mb-4 md:mb-0">
-              <button
-                onClick={() => navigateToSection("makineler")}
+              <Link
+                to="/makineler"
+                onClick={closeMenu}
                 className="text-xl cursor-pointer hover:underline mr-3"
               >
                 Makineler
-              </button>
+              </Link>
             </li>
             <li className="mb-4 md:mb-0">
               <button
