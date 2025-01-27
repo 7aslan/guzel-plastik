@@ -20,7 +20,7 @@ const makineler = [
     {
       id: 4,
       name: "Plastik Enjeksiyon Makinesi",
-      image: "cihaz5_vax4ji", // Cloudinary public_id
+      image: "cihaz5_lyqcdh", // Cloudinary public_id
       description: "Yüksek kaliteli plastik ürünler üretiminde kullanılan enjeksiyon makinesi."
     },
   ];
