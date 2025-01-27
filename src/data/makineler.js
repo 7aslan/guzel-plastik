@@ -22,7 +22,7 @@ const makineler = [
       name: "Plastik Enjeksiyon Makinesi",
       image: "cihaz5_vax4ji", // Cloudinary public_id
       description: "Yüksek kaliteli plastik ürünler üretiminde kullanılan enjeksiyon makinesi."
-    }
+    },
   ];
   
   export default makineler;

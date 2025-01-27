@@ -1,7 +1,7 @@
 import { AdvancedImage } from "@cloudinary/react";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { auto } from "@cloudinary/url-gen/actions/resize";
-import oneCikanlar from "../data/oneCikanlar"; // Öne çıkanlar verisini içe aktarıyoruz
+import oneCikanlar from "../data/oneCikanlar"; // Öne çıkanlar verisini içe aktarıyoruz.
 
 const OneCikanlar = () => {
   const cld = new Cloudinary({

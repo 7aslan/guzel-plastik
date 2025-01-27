@@ -16,8 +16,10 @@ const urunler = [
   { id: 5, name: "Ürün 5", image: "urun7_xgmwg6", description: "" },
   { id: 6, name: "Ürün 6", image: "urun3_qw1lnw", description: "" },
   { id: 7, name: "Ürün 7", image: "urun4_k4egd8", description: "" },
+  { id: 8, name: "Ürün 8", image: "318120996_684932476667786_6697321402512040339_n_hilq2q", description: "kırmızı kelepce" },
 
   // Yeni ürünler eklemek için sadece burayı düzenlemek yeterli
 ];
 
 export default urunler;
+

@@ -5,7 +5,7 @@ const MainPage = () => {
         Siz hayal edin biz gerçekleştirelim
       </h2>
       <p className="max-w-md text-xl text-center">
-        Plastik ve çelik kalıp endüstrisinde yılların tecrübesiyle kaliteli ve çevre dostu
+        Plastik ve enjeksiyon kalıp endüstrisinde yılların tecrübesiyle kaliteli ve çevre dostu
         çözümler sunuyoruz. 
       </p>
     </div>
