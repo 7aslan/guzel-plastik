@@ -18,6 +18,7 @@ const urunler = [
   { id: 7, name: "Ürün 7", image: "urun4_k4egd8", description: "" },
   { id: 8, name: "Ürün 8", image: "318120996_684932476667786_6697321402512040339_n_hilq2q", description: "kırmızı kelepce" },
   { id: 9, name: "Ürün 9", image: "conta_zdwofj", description: "kör conta" },
+  { id: 10, name: "Ürün 10", image: "urun10_vsxxmk", description: "bıçak sapı" },
   // Yeni ürünler eklemek için sadece burayı düzenlemek yeterli
 ];
 
