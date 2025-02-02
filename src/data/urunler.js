@@ -97,34 +97,28 @@ const urunler = [
     description: "Su saati contası",
   },
   
+
+
   {
     id: 17,
-    name: "Mil Başlığı",
-    image: "urun23_map9jk",
-    description: "10 mm miller için üretilmiştir. ",
-  },
-
-
-  {
-    id: 18,
     name: "M-8 Kelebek Vida",
     image: "urun27_lc3qhx",
     description: "Metrik 8 vida üzerine plastik dolgu. Anahtarsız kullanım için üretilmiştir.",
   },
   {
-    id: 19,
+    id: 18,
     name: "Gebelik Testi",
     image: "urun28_vumpic",
     description: "",
   },
   {
-    id: 20,
+    id: 19,
     name: "PVS Teker",
     image: "urun29_rkbm7c",
     description: ""
   },
   {
-    id: 21,
+    id: 20,
     name: "Klor Enjektörü",
     image: "urun30_xrk2wu",
     description: "Suya klor basması için üretilmiştir.",
